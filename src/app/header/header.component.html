@@ -1,0 +1,10 @@
+<h1>
+  Candidates
+</h1>
+<input type="checkbox" id="male" name="male" [(ngModel)]='maleStatus' (change)="queryChange()">
+<label for="male">Male</label>
+
+<input type="checkbox" id="female" name="female" [(ngModel)]='femaleStatus' (change)="queryChange()">
+<label for="female">Female</label>
+
+<input type="text" placeholder="whom are you looking for" [(ngModel)]='inputQuery' (change)="queryChange()">

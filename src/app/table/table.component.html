@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <th> # </th>
+    <th> First Name </th>
+    <th> Last Name </th>
+    <th> Email </th>
+    <th> Gender </th>
+  </tr>
+  <tr *ngFor="let candidate of filteredTableData">
+    <td> {{candidate.id}} </td>
+    <td> {{candidate.first_name}} </td>
+    <td> {{candidate.last_name}} </td>
+    <td> {{candidate.email}} </td>
+    <td> {{candidate.gender}} </td>
+  </tr>
+</table>
+
+<h1>
+  Add New Candidates</h1>
+
+<form>
+  <input type="text" name="firstName" placeholder="First Name" [(ngModel)]='addCandidateFirstName'>
+  <input type="text" name="firstName" placeholder="Last Name"
+  [(ngModel)]='addCandidateLastName'>
+  <br>
+  <input type="text" name="firstName" placeholder="Email" [(ngModel)]='addCandidateEmail'>
+  <br>
+  <input type="radio" id="male" name="male" value="Male" [(ngModel)]='addCandidateGender'>
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="female" value="Female" [(ngModel)]='addCandidateGender'>
+  <label for="female">Female</label><br>
+  <button (click)="addCandidate()"> Add </button>
+</form>
